@@ -1,32 +1,88 @@
 # Author: Siddharth1India
 import os
-import io
-import time
-import json
-import uuid
-import queue
-import threading
-from collections import deque
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from threading import Lock
-from urllib.parse import urljoin, urlparse
-import requests
-from bs4 import BeautifulSoup
-from PIL import Image, ImageFilter
-from io import BytesIO
-
 from flask import (
-    Flask, abort, g, jsonify, redirect, render_template, request,
-    send_file, send_from_directory, url_for, Response
+    Flask, abort, g, redirect, render_template, request,
+    send_from_directory, Response
 )
-
-
-
+from werkzeug.exceptions import NotFound
 
 app = Flask(__name__)
 
-# At the top of your file, add:
-supported_languages = ['en', 'hi', 'fr', 'zh', 'es']  # Add more as needed
+# Supported languages
+supported_languages = ['en', 'hi', 'fr', 'zh', 'es']
+
+# Canonical site configurations for SEO & Sitemap
+SITE_DOMAIN = 'https://pixoratools.com'
+
+TOOL_ROUTES = [
+    'image-compression',
+    'image-rotate',
+    'image-crop',
+    'image-resize',
+    'image-effects',
+    'convert-image-format',
+    'image-watermarking',
+    'blur-face',
+    'remove-background'
+]
+
+INFO_ROUTES = [
+    'about',
+    'contact-us',
+    'help',
+    'faq',
+    'media',
+    'legal',
+    'our-story',
+    'team',
+    'features',
+    'pricing',
+    'languages',
+    'tools',
+    'privacy_policy'
+]
+
+SUPPORTED_FORMATS = ['png', 'jpg', 'jpeg', 'bmp', 'tiff', 'webp', 'ico']
+CONVERTER_ROUTES = [
+    f'convert/{f}-to-{t}'
+    for f in SUPPORTED_FORMATS
+    for t in SUPPORTED_FORMATS
+    if f != t
+]
+
+ALL_PAGE_KEYS = [''] + TOOL_ROUTES + CONVERTER_ROUTES + INFO_ROUTES
+
+_SITEMAP_CACHE = None
+
+def get_canonical_url(lang, key):
+    if key == '':
+        return f'{SITE_DOMAIN}/' if lang == 'en' else f'{SITE_DOMAIN}/{lang}/'
+    return f'{SITE_DOMAIN}/{key}' if lang == 'en' else f'{SITE_DOMAIN}/{lang}/{key}'
+
+def generate_sitemap_xml():
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'
+    ]
+    for lang in supported_languages:
+        for key in ALL_PAGE_KEYS:
+            loc = get_canonical_url(lang, key)
+            lines.append('  <url>')
+            lines.append(f'    <loc>{loc}</loc>')
+            for alt_lang in supported_languages:
+                alt_url = get_canonical_url(alt_lang, key)
+                lines.append(f'    <xhtml:link rel="alternate" hreflang="{alt_lang}" href="{alt_url}"/>')
+            x_default = get_canonical_url('en', key)
+            lines.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{x_default}"/>')
+            lines.append('  </url>')
+    lines.append('</urlset>')
+    return '\n'.join(lines) + '\n'
+
+def get_sitemap_xml():
+    global _SITEMAP_CACHE
+    if _SITEMAP_CACHE is None:
+        _SITEMAP_CACHE = generate_sitemap_xml()
+    return _SITEMAP_CACHE
 
 @app.before_request
 def before_request():
@@ -266,7 +322,7 @@ def favicon():
 
 @app.route('/sitemap.xml')
 def sitemap():
-    return send_from_directory('static', 'sitemap.xml')
+    return Response(get_sitemap_xml(), mimetype='application/xml')
 
 @app.route('/robots.txt')
 def robots():
