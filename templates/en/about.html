@@ -1,0 +1,77 @@
+{% extends 'en/base.html' %}
+
+{% block title %}About Pixora Tools — Free Online Image Editing Platform{% endblock %}
+
+{% block meta_description %}
+<meta name="description"
+    content="Learn about Pixora Tools — an independent online image utility platform offering free tools for compression, resizing, format conversion, watermarking, and more. Browser-based, private, and open-source.">
+{% endblock %}
+
+{% block content %}
+
+<h1>About Pixora Tools</h1>
+<p>Pixora Tools is an independent online image utility platform built for speed, privacy, and simplicity.</p>
+
+<div class="info-container">
+    <div class="info-section">
+        <h2>What is Pixora?</h2>
+        <p>Pixora Tools provides a comprehensive suite of free online image editing tools. From <a href="/image-compression">image compression</a> and <a href="/image-resize">resizing</a> to <a href="/convert-image-format">format conversion</a>, <a href="/image-watermarking">watermarking</a>, and <a href="/blur-face">face blurring</a> — every tool is designed to be fast, accessible, and private.</p>
+        <p>Whether you're a designer preparing assets, a photographer optimizing files, or anyone who works with images, Pixora has the tools you need — completely free, no registration required.</p>
+    </div>
+
+    <div class="info-section">
+        <h2>Our Mission</h2>
+        <p>Professional-grade image editing should be accessible to everyone, regardless of technical expertise or budget. Pixora makes powerful image tools available through your browser — no software installations, no subscriptions, no learning curve.</p>
+        <p>We believe in building tools that respect your privacy and your time. That's why Pixora processes supported images directly in your browser, keeping your files on your device.</p>
+    </div>
+
+    <div class="info-section">
+        <h2>Privacy Philosophy</h2>
+        <p>Privacy is a core principle of Pixora Tools. Supported image processing happens client-side in your browser — your images are never uploaded to any server. We don't collect image data, don't require accounts, and don't track your usage.</p>
+        <p>Your images belong to you. Pixora is designed to keep it that way.</p>
+    </div>
+</div>
+
+<div class="info-container" style="margin-top: 24px !important;">
+    <div class="info-section">
+        <h2>Our Tools</h2>
+        <p>Pixora offers a wide range of image editing tools, including:</p>
+        <ul>
+            <li><a href="/image-compression">Image Compression</a> — Reduce file sizes while maintaining quality</li>
+            <li><a href="/image-resize">Image Resizing</a> — Adjust image dimensions to any size</li>
+            <li><a href="/convert-image-format">Format Conversion</a> — Convert between PNG, JPG, WebP, BMP, TIFF, ICO</li>
+            <li><a href="/image-rotate">Image Rotation</a> — Rotate and flip images</li>
+            <li><a href="/image-effects">Image Effects</a> — Apply filters and visual effects</li>
+            <li><a href="/image-watermarking">Watermarking</a> — Protect images with custom watermarks</li>
+            <li><a href="/image-crop">Image Cropping</a> — Crop to precise dimensions</li>
+            <li><a href="/blur-face">Face Blurring</a> — Automatically blur faces for privacy</li>
+            <li><a href="/remove-background">Background Removal</a> — Remove image backgrounds</li>
+            <li><a href="/tools">View all tools →</a></li>
+        </ul>
+    </div>
+
+    <div class="info-section">
+        <h2>Technology</h2>
+        <p>Pixora Tools is built with modern web technologies that enable powerful image processing directly in the browser. Client-side JavaScript handles compression, conversion, resizing, and effects — delivering fast results without server round-trips.</p>
+        <p>For advanced features like face detection and background removal, Pixora uses efficient ML models that run locally. The platform is built on open-source technology and is continuously improved.</p>
+    </div>
+
+    <div class="info-section">
+        <h2>Open Source</h2>
+        <p>Pixora Tools is built on open-source foundations. The project's codebase is available under the MIT License, promoting transparency and community collaboration.</p>
+        <p>We welcome contributions, feedback, and feature requests from the community. Open-source is not just a license — it's a commitment to building software that serves its users.</p>
+        <p><em>Pixora Tools is maintained by an independent team dedicated to making image editing accessible to everyone.</em></p>
+    </div>
+</div>
+
+<style>
+    .info-section a {
+        color: var(--color-orange);
+        font-weight: 700;
+    }
+    .info-section a:hover {
+        color: var(--color-orange-dark);
+    }
+</style>
+
+{% endblock %}

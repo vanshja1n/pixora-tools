@@ -1,0 +1,41 @@
+{% extends "zh/base.html" %}
+
+{% block title %}联系我们 | Pixora Tools — Free Online Image Tools{% endblock %}
+
+{% block meta_description %}
+<meta name="description" content="联系我们 - Pixora Tools。若您对我们的图片处理工具有任何问题、反馈或需要支持，随时与我们联系。我们在这里为您提供图片压缩、调整大小、格式转换等帮助。">
+{% endblock %}
+
+{% block content %}
+<h1>联系我们 - Pixora Tools</h1>
+
+<div class="contact-section">
+    <h2>与我们取得联系</h2>
+    <p>我们很乐意倾听您的声音！无论您对我们的工具有疑问、需要技术支持还是想提供反馈，请随时与我们联系。</p>
+    
+    <p>通过电子邮件联系我们：<a href="mailto:vj8067202@gmail.com">vj8067202@gmail.com</a></p>
+</div>
+
+<div class="contact-section">
+    <h2>其他联系方式</h2>
+    <p>为了更快获得回复，请先查看我们的 <a href="/zh/faq">常见问题 (FAQ)</a> 页面。那里解答了许多常见问题。</p>
+</div>
+
+<style>
+    .contact-section {
+        margin-bottom: 24px;
+        padding: clamp(20px, 3vw, 32px);
+        background-color: var(--color-white);
+        border: var(--border);
+        box-shadow: var(--shadow-hard-sm);
+        border-radius: 0;
+    }
+    .contact-section a {
+        color: var(--color-orange);
+        font-weight: 700;
+    }
+    .contact-section a:hover {
+        color: var(--color-orange-dark);
+    }
+</style>
+{% endblock %}

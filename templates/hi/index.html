@@ -1,0 +1,337 @@
+{% extends 'hi/base.html' %}
+
+{% block title %}Pixora Tools — Free Online Image Tools{% endblock %}
+
+{% block meta_description %}
+<meta name="description"
+    content="Pixora Tools — फ्री ऑनलाइन इमेज टूल्स जो सीधे आपके ब्राउज़र में काम करते हैं। बिना सर्वर पर अपलोड किए छवियों को संकुचित करें, आकार बदलें, परिवर्तित करें, क्रॉप करें, वॉटरमार्क लगाएं और चेहरे धुंधले करें।">
+<meta name="keywords" content="इमेज कंप्रेसर, इमेज रीसाइज़र, इमेज कनवर्टर, इमेज क्रॉप, वॉटरमार्क टूल, फेस ब्लर, PNG से JPG, JPG से PNG, फ्री इमेज टूल्स">
+<link rel="canonical" href="/hi/">
+{% endblock %}
+
+{% block content %}
+
+<!-- ============================================================
+     HERO SECTION
+     ============================================================ -->
+<section class="home-hero">
+    <div class="hero-copy">
+        <span class="hero-kicker">फ्री ऑनलाइन इमेज टूल्स</span>
+        <h1>Pixora Tools</h1>
+        <h2>Pixora Tools — Free Online Image Tools. तेज़ और मुफ़्त इमेज टूल्स जो आपके ब्राउज़र में काम करते हैं। छवियों को संकुचित, आकार बदलें, परिवर्तित, क्रॉप और संपादित करें — कोई अपलोड नहीं, कोई पंजीकरण नहीं।</h2>
+
+        <div class="hero-cta-row">
+            <a href="#featured-tools" class="cta-button" style="text-decoration:none;">उपकरण देखें</a>
+            <a href="#how-it-works" class="cta-button btn-secondary" style="text-decoration:none; border: 3px solid #111315;">यह कैसे काम करता है</a>
+        </div>
+
+        <div class="hero-privacy">
+            <span class="hero-privacy-icon">🔒</span>
+            आपके ब्राउज़र में संसाधित — आपकी छवियां कभी आपके डिवाइस से बाहर नहीं जातीं
+        </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+        <div class="pixora-graphic">
+            <div class="pixora-graphic-block pixora-graphic-block-1"></div>
+            <div class="pixora-graphic-block pixora-graphic-block-2"></div>
+            <div class="pixora-graphic-block pixora-graphic-block-3"></div>
+            <div class="pixora-graphic-circle"></div>
+            <div class="pixora-graphic-triangle"></div>
+            <div class="pixora-graphic-dots"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     FEATURED TOOLS
+     ============================================================ -->
+<div id="featured-tools">
+    <span class="section-kicker">लोकप्रिय उपकरण</span>
+    <div class="section-heading">
+        <h2>इमेज उपकरण</h2>
+        <div class="section-heading-line"></div>
+    </div>
+</div>
+
+<div class="grid-container">
+    <a href="/hi/image-compression" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='compress.svg') }}" alt="इमेज संकुचन">
+            <h2>इमेज संकुचन</h2>
+            <p>गुणवत्ता खोए बिना फ़ाइल का आकार कम करें</p>
+        </div>
+    </a>
+
+    <a href="/hi/image-resize" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='resize1.svg') }}" alt="इमेज आकार बदलें">
+            <h2>आकार बदलें</h2>
+            <p>अपनी छवियों को किसी भी आकार में बदलें</p>
+        </div>
+    </a>
+
+    <a href="/hi/image-crop" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='crop.svg') }}" alt="इमेज क्रॉप करें">
+            <h2>क्रॉप करें</h2>
+            <p>छवियों को सटीक आयामों में क्रॉप करें</p>
+        </div>
+    </a>
+
+    <a href="/hi/convert-image-format" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='convert1.svg') }}" alt="इमेज परिवर्तित करें">
+            <h2>प्रारूप परिवर्तित करें</h2>
+            <p>PNG, JPG, WebP, BMP, TIFF और ICO में बदलें</p>
+        </div>
+    </a>
+
+    <a href="/hi/image-rotate" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='rotate1.svg') }}" alt="इमेज घुमाएँ">
+            <h2>इमेज घुमाएँ</h2>
+            <p>किसी भी दिशा में छवियों को घुमाएँ या पलटें</p>
+        </div>
+    </a>
+
+    <a href="/hi/image-effects" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='edit.svg') }}" alt="इमेज प्रभाव">
+            <h2>इमेज प्रभाव</h2>
+            <p>फ़िल्टर और दृश्य प्रभाव लागू करें</p>
+        </div>
+    </a>
+
+    <a href="/hi/image-watermarking" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='stamp.svg') }}" alt="वॉटरमार्क">
+            <h2>वॉटरमार्क</h2>
+            <p>सुरक्षा के लिए टेक्स्ट या इमेज वॉटरमार्क जोड़ें</p>
+        </div>
+    </a>
+
+    <a href="/hi/blur-face" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='blur.svg') }}" alt="चेहरा धुंधला करें">
+            <h2>चेहरा धुंधला करें</h2>
+            <p>गोपनीयता के लिए चेहरों का स्वतः पता लगाकर ब्लर करें</p>
+        </div>
+    </a>
+
+    <a href="/hi/remove-background" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='background-icon.svg') }}" alt="बैकग्राउंड हटाएं">
+            <h2>बैकग्राउंड हटाएं</h2>
+            <p>छवियों से बैकग्राउंड तुरंत हटाएं</p>
+        </div>
+    </a>
+
+    <a href="/hi/convert/png-to-jpg" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='format_1.svg') }}" alt="PNG से JPG">
+            <h2>PNG से JPG</h2>
+            <p>PNG छवियों को JPG प्रारूप में बदलें</p>
+        </div>
+    </a>
+
+    <a href="/hi/convert/jpg-to-png" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='format_2.svg') }}" alt="JPG से PNG">
+            <h2>JPG से PNG</h2>
+            <p>JPG छवियों को PNG प्रारूप में बदलें</p>
+        </div>
+    </a>
+
+    <a href="/hi/convert/webp-to-jpg" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='format_3.svg') }}" alt="WebP से JPG">
+            <h2>WebP से JPG</h2>
+            <p>WebP छवियों को JPG प्रारूप में बदलें</p>
+        </div>
+    </a>
+</div>
+
+<!-- ============================================================
+     FORMAT CONVERTERS
+     ============================================================ -->
+<span class="section-kicker">प्रारूप कनवर्टर्स</span>
+<div class="section-heading">
+    <h2>विभिन्न प्रारूपों में परिवर्तित करें</h2>
+    <div class="section-heading-line"></div>
+</div>
+
+<div class="grid-container">
+    <a href="/hi/convert/png-to-jpeg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_2.svg') }}" alt="PNG से JPEG"><h2>PNG से JPEG</h2><p>ऑनलाइन PNG से JPEG में बदलें</p></div></a>
+    <a href="/hi/convert/png-to-bmp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="PNG से BMP"><h2>PNG से BMP</h2><p>ऑनलाइन PNG से BMP में बदलें</p></div></a>
+    <a href="/hi/convert/png-to-tiff" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="PNG से TIFF"><h2>PNG से TIFF</h2><p>ऑनलाइन PNG से TIFF में बदलें</p></div></a>
+    <a href="/hi/convert/png-to-webp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="PNG से WEBP"><h2>PNG से WEBP</h2><p>ऑनलाइन PNG से WEBP में बदलें</p></div></a>
+    <a href="/hi/convert/png-to-ico" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="PNG से ICO"><h2>PNG से ICO</h2><p>ऑनलाइन PNG से ICO में बदलें</p></div></a>
+    <a href="/hi/convert/jpg-to-jpeg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_2.svg') }}" alt="JPG से JPEG"><h2>JPG से JPEG</h2><p>ऑनलाइन JPG से JPEG में बदलें</p></div></a>
+    <a href="/hi/convert/jpg-to-bmp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="JPG से BMP"><h2>JPG से BMP</h2><p>ऑनलाइन JPG से BMP में बदलें</p></div></a>
+    <a href="/hi/convert/jpg-to-tiff" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="JPG से TIFF"><h2>JPG से TIFF</h2><p>ऑनलाइन JPG से TIFF में बदलें</p></div></a>
+    <a href="/hi/convert/jpg-to-webp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="JPG से WEBP"><h2>JPG से WEBP</h2><p>ऑनलाइन JPG से WEBP में बदलें</p></div></a>
+    <a href="/hi/convert/jpg-to-ico" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="JPG से ICO"><h2>JPG से ICO</h2><p>ऑनलाइन JPG से ICO में बदलें</p></div></a>
+    <a href="/hi/convert/jpeg-to-png" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_1.svg') }}" alt="JPEG से PNG"><h2>JPEG से PNG</h2><p>ऑनलाइन JPEG से PNG में बदलें</p></div></a>
+    <a href="/hi/convert/jpeg-to-jpg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_2.svg') }}" alt="JPEG से JPG"><h2>JPEG से JPG</h2><p>ऑनलाइन JPEG से JPG में बदलें</p></div></a>
+    <a href="/hi/convert/jpeg-to-bmp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="JPEG से BMP"><h2>JPEG से BMP</h2><p>ऑनलाइन JPEG से BMP में बदलें</p></div></a>
+    <a href="/hi/convert/jpeg-to-tiff" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="JPEG से TIFF"><h2>JPEG से TIFF</h2><p>ऑनलाइन JPEG से TIFF में बदलें</p></div></a>
+    <a href="/hi/convert/jpeg-to-webp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="JPEG से WEBP"><h2>JPEG से WEBP</h2><p>ऑनलाइन JPEG से WEBP में बदलें</p></div></a>
+    <a href="/hi/convert/jpeg-to-ico" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="JPEG से ICO"><h2>JPEG से ICO</h2><p>ऑनलाइन JPEG से ICO में बदलें</p></div></a>
+    <a href="/hi/convert/bmp-to-png" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_1.svg') }}" alt="BMP से PNG"><h2>BMP से PNG</h2><p>ऑनलाइन BMP से PNG में बदलें</p></div></a>
+    <a href="/hi/convert/bmp-to-jpg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_2.svg') }}" alt="BMP से JPG"><h2>BMP से JPG</h2><p>ऑनलाइन BMP से JPG में बदलें</p></div></a>
+    <a href="/hi/convert/bmp-to-jpeg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="BMP से JPEG"><h2>BMP से JPEG</h2><p>ऑनलाइन BMP से JPEG में बदलें</p></div></a>
+    <a href="/hi/convert/bmp-to-tiff" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="BMP से TIFF"><h2>BMP से TIFF</h2><p>ऑनलाइन BMP से TIFF में बदलें</p></div></a>
+    <a href="/hi/convert/bmp-to-webp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="BMP से WEBP"><h2>BMP से WEBP</h2><p>ऑनलाइन BMP से WEBP में बदलें</p></div></a>
+    <a href="/hi/convert/bmp-to-ico" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="BMP से ICO"><h2>BMP से ICO</h2><p>ऑनलाइन BMP से ICO में बदलें</p></div></a>
+    <a href="/hi/convert/tiff-to-png" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_1.svg') }}" alt="TIFF से PNG"><h2>TIFF से PNG</h2><p>ऑनलाइन TIFF से PNG में बदलें</p></div></a>
+    <a href="/hi/convert/tiff-to-jpg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_2.svg') }}" alt="TIFF से JPG"><h2>TIFF से JPG</h2><p>ऑनलाइन TIFF से JPG में बदलें</p></div></a>
+    <a href="/hi/convert/tiff-to-jpeg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="TIFF से JPEG"><h2>TIFF से JPEG</h2><p>ऑनलाइन TIFF से JPEG में बदलें</p></div></a>
+    <a href="/hi/convert/tiff-to-bmp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="TIFF से BMP"><h2>TIFF से BMP</h2><p>ऑनलाइन TIFF से BMP में बदलें</p></div></a>
+    <a href="/hi/convert/tiff-to-webp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="TIFF से WEBP"><h2>TIFF से WEBP</h2><p>ऑनलाइन TIFF से WEBP में बदलें</p></div></a>
+    <a href="/hi/convert/tiff-to-ico" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="TIFF से ICO"><h2>TIFF से ICO</h2><p>ऑनलाइन TIFF से ICO में बदलें</p></div></a>
+    <a href="/hi/convert/webp-to-png" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_1.svg') }}" alt="WEBP से PNG"><h2>WEBP से PNG</h2><p>ऑनलाइन WEBP से PNG में बदलें</p></div></a>
+    <a href="/hi/convert/webp-to-jpeg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="WEBP से JPEG"><h2>WEBP से JPEG</h2><p>ऑनलाइन WEBP से JPEG में बदलें</p></div></a>
+    <a href="/hi/convert/webp-to-bmp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="WEBP से BMP"><h2>WEBP से BMP</h2><p>ऑनलाइन WEBP से BMP में बदलें</p></div></a>
+    <a href="/hi/convert/webp-to-tiff" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="WEBP से TIFF"><h2>WEBP से TIFF</h2><p>ऑनलाइन WEBP से TIFF में बदलें</p></div></a>
+    <a href="/hi/convert/webp-to-ico" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="WEBP से ICO"><h2>WEBP से ICO</h2><p>ऑनलाइन WEBP से ICO में बदलें</p></div></a>
+    <a href="/hi/convert/ico-to-png" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_1.svg') }}" alt="ICO से PNG"><h2>ICO से PNG</h2><p>ऑनलाइन ICO से PNG में बदलें</p></div></a>
+    <a href="/hi/convert/ico-to-jpg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_2.svg') }}" alt="ICO से JPG"><h2>ICO से JPG</h2><p>ऑनलाइन ICO से JPG में बदलें</p></div></a>
+    <a href="/hi/convert/ico-to-jpeg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="ICO से JPEG"><h2>ICO से JPEG</h2><p>ऑनलाइन ICO से JPEG में बदलें</p></div></a>
+    <a href="/hi/convert/ico-to-bmp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="ICO से BMP"><h2>ICO से BMP</h2><p>ऑनलाइन ICO से BMP में बदलें</p></div></a>
+    <a href="/hi/convert/ico-to-tiff" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="ICO से TIFF"><h2>ICO से TIFF</h2><p>ऑनलाइन ICO से TIFF में बदलें</p></div></a>
+    <a href="/hi/convert/ico-to-webp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="ICO से WEBP"><h2>ICO से WEBP</h2><p>ऑनलाइन ICO से WEBP में बदलें</p></div></a>
+</div>
+
+<!-- ============================================================
+     BATCH PROCESSING TOOLS
+     ============================================================ -->
+<span class="section-kicker">बैच प्रोसेसिंग</span>
+<div class="section-heading">
+    <h2>एक साथ कई छवियों को प्रोसेस करें</h2>
+    <div class="section-heading-line"></div>
+</div>
+
+<div class="grid-container">
+    <a href="/hi/batch-image-compression" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='compress.svg') }}" alt="बैच संकुचन"><h2>बैच संकुचन</h2><p>एक साथ कई छवियों को संकुचित करें</p></div>
+    </a>
+    <a href="/hi/batch-image-resize" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='resize1.svg') }}" alt="बैच आकार बदलें"><h2>बैच आकार बदलें</h2><p>एक साथ कई छवियों का आकार बदलें</p></div>
+    </a>
+    <a href="/hi/batch-image-crop" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='crop.svg') }}" alt="बैच क्रॉप"><h2>बैच क्रॉप</h2><p>एक साथ कई छवियों को क्रॉप करें</p></div>
+    </a>
+    <a href="/hi/batch-convert-image-format" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='convert1.svg') }}" alt="बैच कनवर्ट"><h2>बैच कनवर्ट</h2><p>कई छवियों को किसी भी प्रारूप में बदलें</p></div>
+    </a>
+    <a href="/hi/batch-image-rotate" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='rotate1.svg') }}" alt="बैच घुमाएँ"><h2>बैच घुमाएँ</h2><p>एक साथ कई छवियों को घुमाएँ</p></div>
+    </a>
+    <a href="/hi/batch-image-effects" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='edit.svg') }}" alt="बैच प्रभाव"><h2>बैच प्रभाव</h2><p>कई छवियों पर प्रभाव लागू करें</p></div>
+    </a>
+    <a href="/hi/batch-image-watermarking" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='stamp.svg') }}" alt="बैच वॉटरमार्क"><h2>बैच वॉटरमार्क</h2><p>कई छवियों में वॉटरमार्क जोड़ें</p></div>
+    </a>
+    <a href="/hi/batch-blur-face" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='blur.svg') }}" alt="बैच चेहरा धुंधला"><h2>बैच चेहरा ब्लर</h2><p>कई छवियों में चेहरे धुंधले करें</p></div>
+    </a>
+</div>
+
+<!-- ============================================================
+     BATCH CONVERTERS
+     ============================================================ -->
+<span class="section-kicker">बैच कनवर्टर्स</span>
+<div class="section-heading">
+    <h2>बैच प्रारूप रूपांतरण</h2>
+    <div class="section-heading-line"></div>
+</div>
+
+<div class="grid-container">
+    {% set batch_formats = [
+        ('png', 'jpg'), ('png', 'jpeg'), ('png', 'bmp'), ('png', 'tiff'), ('png', 'webp'), ('png', 'ico'),
+        ('jpg', 'png'), ('jpg', 'jpeg'), ('jpg', 'bmp'), ('jpg', 'tiff'), ('jpg', 'webp'), ('jpg', 'ico'),
+        ('jpeg', 'png'), ('jpeg', 'jpg'), ('jpeg', 'bmp'), ('jpeg', 'tiff'), ('jpeg', 'webp'), ('jpeg', 'ico'),
+        ('bmp', 'png'), ('bmp', 'jpg'), ('bmp', 'jpeg'), ('bmp', 'tiff'), ('bmp', 'webp'), ('bmp', 'ico'),
+        ('tiff', 'png'), ('tiff', 'jpg'), ('tiff', 'jpeg'), ('tiff', 'bmp'), ('tiff', 'webp'), ('tiff', 'ico'),
+        ('webp', 'png'), ('webp', 'jpg'), ('webp', 'jpeg'), ('webp', 'bmp'), ('webp', 'tiff'), ('webp', 'ico'),
+        ('ico', 'png'), ('ico', 'jpg'), ('ico', 'jpeg'), ('ico', 'bmp'), ('ico', 'tiff'), ('ico', 'webp')
+    ] %}
+    {% set icon_cycle = ['format_1.svg', 'format_2.svg', 'format_3.svg', 'format_4.svg', 'format_5.svg', 'format_6.svg'] %}
+    {% for from_fmt, to_fmt in batch_formats %}
+    <a href="/hi/batch/{{ from_fmt }}-to-{{ to_fmt }}" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename=icon_cycle[loop.index0 % 6]) }}" alt="बैच {{ from_fmt|upper }} से {{ to_fmt|upper }}">
+            <h2>बैच {{ from_fmt|upper }} से {{ to_fmt|upper }}</h2>
+            <p>कई {{ from_fmt|upper }} छवियों को {{ to_fmt|upper }} में बदलें</p>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+
+<!-- ============================================================
+     HOW IT WORKS / PRIVACY
+     ============================================================ -->
+<div id="how-it-works">
+    <section class="privacy-section">
+        <div class="privacy-section-icon">🛡️</div>
+        <div>
+            <h2>आपकी छवियां पूरी तरह सुरक्षित और निजी हैं</h2>
+            <p>Pixora Tools क्लाइंट-साइड तकनीक का उपयोग करके सीधे आपके वेब ब्राउज़र में छवियों को प्रोसेस करता है। आपकी फ़ाइलें कभी किसी सर्वर पर अपलोड नहीं की जाती हैं — वे पूरी प्रक्रिया के दौरान आपके डिवाइस पर ही सुरक्षित रहती हैं। कोई अकाउंट नहीं, कोई डेटा संग्रह नहीं, कोई ट्रैकिंग नहीं। तेज़ और सुरक्षित इमेज एडिटिंग।</p>
+        </div>
+    </section>
+</div>
+
+<!-- ============================================================
+     WHY PIXORA
+     ============================================================ -->
+<span class="section-kicker">Pixora क्यों चुनें</span>
+<div class="section-heading">
+    <h2>गति और सरलता के लिए निर्मित</h2>
+    <div class="section-heading-line"></div>
+</div>
+
+<div class="why-pixora">
+    <div class="why-pixora-card">
+        <div class="why-pixora-icon">⚡</div>
+        <h3>तेज़</h3>
+        <p>ब्राउज़र-आधारित प्रोसेसिंग का मतलब है तुरंत परिणाम। सर्वर पर अपलोड करने या प्रतीक्षा करने की कोई आवश्यकता नहीं।</p>
+    </div>
+    <div class="why-pixora-card">
+        <div class="why-pixora-icon">🔒</div>
+        <h3>निजी</h3>
+        <p>आपकी छवियां कभी आपके डिवाइस से बाहर नहीं जातीं। सभी कार्य सीधे आपके ब्राउज़र में सुरक्षित रूप से होते हैं।</p>
+    </div>
+    <div class="why-pixora-card">
+        <div class="why-pixora-icon">✦</div>
+        <h3>मुफ़्त</h3>
+        <p>Pixora पर प्रत्येक उपकरण 100% मुफ़्त है। कोई सदस्यता नहीं, कोई छिपा शुल्क नहीं, कोई वॉटरमार्क नहीं।</p>
+    </div>
+    <div class="why-pixora-card">
+        <div class="why-pixora-icon">◎</div>
+        <h3>आसान</h3>
+        <p>ड्रैग करें, समायोजित करें और डाउनलोड करें। सभी के लिए बेहद सरल और सहज इंटरफ़ेस।</p>
+    </div>
+</div>
+
+<!-- ============================================================
+     ABOUT PIXORA
+     ============================================================ -->
+<section class="about-pixora-section">
+    <h2>Pixora Tools के बारे में</h2>
+    <p>Pixora Tools एक स्वतंत्र ऑनलाइन इमेज यूटिलिटी प्लेटफॉर्म है जिसे हर उस व्यक्ति के लिए बनाया गया है जो छवियों के साथ काम करता है। चाहे आपको वेबसाइट के लिए फ़ोटो संकुचित करनी हो, प्रारूप बदलना हो या चेहरे धुंधले करने हों, Pixora आपको तुरंत आवश्यक उपकरण प्रदान करता है।</p>
+    <p>ओपन-सोर्स तकनीक पर निर्मित, Pixora गति, गोपनीयता और सादगी को प्राथमिकता देता है। बिना किसी डाउनलोड, इंस्टॉलेशन या साइनअप के शक्तिशाली टूल्स का उपयोग करें।</p>
+    <p><a href="/hi/about">Pixora के बारे में अधिक जानें →</a></p>
+</section>
+
+<!-- ============================================================
+     TRUST STRIP
+     ============================================================ -->
+<section class="trust-strip" aria-label="Pixora Tools के लाभ">
+    <div class="trust-item"><span class="trust-icon">✓</span><span><strong>100% निजी</strong><span>फ़ाइलें आपके डिवाइस में ही रहती हैं</span></span></div>
+    <div class="trust-item"><span class="trust-icon">↯</span><span><strong>तुरंत प्रोसेसिंग</strong><span>ब्राउज़र-आधारित तेज़ उपकरण</span></span></div>
+    <div class="trust-item"><span class="trust-icon">○</span><span><strong>कोई साइनअप नहीं</strong><span>तुरंत संपादन शुरू करें</span></span></div>
+    <div class="trust-item"><span class="trust-icon">☺</span><span><strong>उपयोग में आसान</strong><span>सरल और सीधा कार्यप्रवाह</span></span></div>
+</section>
+
+{% endblock %}

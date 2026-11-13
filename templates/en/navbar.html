@@ -1,0 +1,103 @@
+<nav>
+    <div class="nav-logo">
+        <a href="/" style="text-decoration: none; color: inherit;">Pixora Tools</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle Navigation" aria-expanded="false" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="/image-compression">Compress</a></li>
+        <li><a href="/image-resize">Resize</a></li>
+        <li><a href="/convert-image-format">Convert</a></li>
+        <li class="more-menu">
+            <a href="javascript:void(0)" class="more-menu-button">
+                <span>More Tools</span>
+                <span class="more-indicator">+</span>
+            </a>
+            <div class="more-menu-content">
+                <a href="/image-rotate">Rotate Image</a>
+                <a href="/image-watermarking">Watermark</a>
+                <a href="/image-effects">Image Effects</a>
+                <a href="/image-crop">Crop Image</a>
+                <a href="/blur-face">Blur Face</a>
+                <a href="/remove-background">Remove Background</a>
+                <a href="/tools">All Tools</a>
+            </div>
+        </li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        const moreMenuButton = document.querySelector('.more-menu-button');
+        const moreMenuContent = document.querySelector('.more-menu-content');
+
+        function closeNav() {
+            if (hamburger && navLinks) {
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = hamburger.classList.toggle('active');
+                hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                navLinks.classList.toggle('active');
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            });
+        }
+
+        if (moreMenuButton && moreMenuContent) {
+            moreMenuButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isShown = moreMenuContent.classList.toggle('show');
+                const indicator = moreMenuButton.querySelector('.more-indicator');
+                if (indicator) {
+                    indicator.textContent = isShown ? '−' : '+';
+                }
+            });
+        }
+
+        // Close menu when tapping any navigation link
+        if (navLinks) {
+            navLinks.querySelectorAll('a:not(.more-menu-button)').forEach(link => {
+                link.addEventListener('click', () => {
+                    closeNav();
+                });
+            });
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navLinks && navLinks.classList.contains('active')) {
+                if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                    closeNav();
+                }
+            }
+            if (moreMenuContent && moreMenuContent.classList.contains('show')) {
+                if (!moreMenuContent.contains(e.target) && !moreMenuButton.contains(e.target)) {
+                    moreMenuContent.classList.remove('show');
+                    const indicator = moreMenuButton ? moreMenuButton.querySelector('.more-indicator') : null;
+                    if (indicator) indicator.textContent = '+';
+                }
+            }
+        });
+
+        // Close on window resize to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) {
+                closeNav();
+            }
+        });
+    });
+</script>

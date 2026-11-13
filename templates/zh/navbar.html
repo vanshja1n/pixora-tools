@@ -1,0 +1,100 @@
+<nav>
+    <div class="nav-logo">
+        <a href="/zh/" style="text-decoration: none; color: inherit;">Pixora Tools</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="打开导航菜单" aria-expanded="false" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="/zh/image-compression">压缩</a></li>
+        <li><a href="/zh/image-resize">调整大小</a></li>
+        <li><a href="/zh/convert-image-format">格式转换</a></li>
+        <li class="more-menu">
+            <a href="javascript:void(0)" class="more-menu-button">
+                <span>更多工具</span>
+                <span class="more-indicator">+</span>
+            </a>
+            <div class="more-menu-content">
+                <a href="/zh/image-rotate">旋转图像</a>
+                <a href="/zh/image-watermarking">添加水印</a>
+                <a href="/zh/image-effects">图像特效</a>
+                <a href="/zh/image-crop">裁剪图像</a>
+                <a href="/zh/blur-face">人脸模糊</a>
+                <a href="/zh/remove-background">去除背景</a>
+                <a href="/zh/tools">全部工具</a>
+            </div>
+        </li>
+        <li><a href="/zh/about">关于我们</a></li>
+    </ul>
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        const moreMenuButton = document.querySelector('.more-menu-button');
+        const moreMenuContent = document.querySelector('.more-menu-content');
+
+        function closeNav() {
+            if (hamburger && navLinks) {
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = hamburger.classList.toggle('active');
+                hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                navLinks.classList.toggle('active');
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            });
+        }
+
+        if (moreMenuButton && moreMenuContent) {
+            moreMenuButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isShown = moreMenuContent.classList.toggle('show');
+                const indicator = moreMenuButton.querySelector('.more-indicator');
+                if (indicator) {
+                    indicator.textContent = isShown ? '−' : '+';
+                }
+            });
+        }
+
+        if (navLinks) {
+            navLinks.querySelectorAll('a:not(.more-menu-button)').forEach(link => {
+                link.addEventListener('click', () => {
+                    closeNav();
+                });
+            });
+        }
+
+        document.addEventListener('click', (e) => {
+            if (navLinks && navLinks.classList.contains('active')) {
+                if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                    closeNav();
+                }
+            }
+            if (moreMenuContent && moreMenuContent.classList.contains('show')) {
+                if (!moreMenuContent.contains(e.target) && !moreMenuButton.contains(e.target)) {
+                    moreMenuContent.classList.remove('show');
+                    const indicator = moreMenuButton ? moreMenuButton.querySelector('.more-indicator') : null;
+                    if (indicator) indicator.textContent = '+';
+                }
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) {
+                closeNav();
+            }
+        });
+    });
+</script>

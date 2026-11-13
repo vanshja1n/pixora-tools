@@ -1,0 +1,337 @@
+{% extends 'zh/base.html' %}
+
+{% block title %}Pixora Tools — Free Online Image Tools{% endblock %}
+
+{% block meta_description %}
+<meta name="description"
+    content="Pixora Tools — 在浏览器中运行的免费在线图像工具。压缩、调整大小、转换格式、裁剪、添加水印和人脸模糊，无需上传服务器，快速且私密。">
+<meta name="keywords" content="图像压缩, 调整图像大小, 图片格式转换, 裁剪图片, 图片水印, 人脸模糊, PNG 转 JPG, JPG 转 PNG, 免费图片工具">
+<link rel="canonical" href="/zh/">
+{% endblock %}
+
+{% block content %}
+
+<!-- ============================================================
+     HERO SECTION
+     ============================================================ -->
+<section class="home-hero">
+    <div class="hero-copy">
+        <span class="hero-kicker">免费在线图像工具</span>
+        <h1>Pixora Tools</h1>
+        <h2>Pixora Tools — Free Online Image Tools。在您的浏览器中直接运行的极速免费图像工具。轻松压缩、调整大小、转换、裁剪和编辑图像 — 无需上传至服务器，无需注册。</h2>
+
+        <div class="hero-cta-row">
+            <a href="#featured-tools" class="cta-button" style="text-decoration:none;">浏览图像工具</a>
+            <a href="#how-it-works" class="cta-button btn-secondary" style="text-decoration:none; border: 3px solid #111315;">工作原理</a>
+        </div>
+
+        <div class="hero-privacy">
+            <span class="hero-privacy-icon">🔒</span>
+            在您的浏览器本地处理 — 您的图片始终安全保存在设备上
+        </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+        <div class="pixora-graphic">
+            <div class="pixora-graphic-block pixora-graphic-block-1"></div>
+            <div class="pixora-graphic-block pixora-graphic-block-2"></div>
+            <div class="pixora-graphic-block pixora-graphic-block-3"></div>
+            <div class="pixora-graphic-circle"></div>
+            <div class="pixora-graphic-triangle"></div>
+            <div class="pixora-graphic-dots"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     FEATURED TOOLS
+     ============================================================ -->
+<div id="featured-tools">
+    <span class="section-kicker">热门工具</span>
+    <div class="section-heading">
+        <h2>图像编辑工具</h2>
+        <div class="section-heading-line"></div>
+    </div>
+</div>
+
+<div class="grid-container">
+    <a href="/zh/image-compression" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='compress.svg') }}" alt="压缩图像">
+            <h2>压缩图像</h2>
+            <p>在保证高画质的前提下大幅减小图像文件体积</p>
+        </div>
+    </a>
+
+    <a href="/zh/image-resize" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='resize1.svg') }}" alt="调整图像大小">
+            <h2>调整大小</h2>
+            <p>自由调整图像像素尺寸和比例</p>
+        </div>
+    </a>
+
+    <a href="/zh/image-crop" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='crop.svg') }}" alt="裁剪图像">
+            <h2>裁剪图像</h2>
+            <p>精确裁剪图像的指定区域</p>
+        </div>
+    </a>
+
+    <a href="/zh/convert-image-format" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='convert1.svg') }}" alt="转换图像格式">
+            <h2>格式转换</h2>
+            <p>在 PNG、JPG、WebP、BMP、TIFF 和 ICO 之间自由转换</p>
+        </div>
+    </a>
+
+    <a href="/zh/image-rotate" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='rotate1.svg') }}" alt="旋转图像">
+            <h2>旋转图像</h2>
+            <p>按任意角度旋转或水平/垂直翻转图片</p>
+        </div>
+    </a>
+
+    <a href="/zh/image-effects" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='edit.svg') }}" alt="图像特效">
+            <h2>图像特效</h2>
+            <p>应用滤镜和精美视觉效果</p>
+        </div>
+    </a>
+
+    <a href="/zh/image-watermarking" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='stamp.svg') }}" alt="图像水印">
+            <h2>添加水印</h2>
+            <p>添加自定义文字或图像水印保护版权</p>
+        </div>
+    </a>
+
+    <a href="/zh/blur-face" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='blur.svg') }}" alt="人脸模糊">
+            <h2>人脸模糊</h2>
+            <p>智能识别并模糊人脸以保护个人隐私</p>
+        </div>
+    </a>
+
+    <a href="/zh/remove-background" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='background-icon.svg') }}" alt="去除背景">
+            <h2>去除背景</h2>
+            <p>智能去除图像背景生成透明图片</p>
+        </div>
+    </a>
+
+    <a href="/zh/convert/png-to-jpg" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='format_1.svg') }}" alt="PNG 转 JPG">
+            <h2>PNG 转 JPG</h2>
+            <p>将 PNG 图像转换为 JPG 格式</p>
+        </div>
+    </a>
+
+    <a href="/zh/convert/jpg-to-png" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='format_2.svg') }}" alt="JPG 转 PNG">
+            <h2>JPG 转 PNG</h2>
+            <p>将 JPG 图像转换为透明 PNG 格式</p>
+        </div>
+    </a>
+
+    <a href="/zh/convert/webp-to-jpg" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='format_3.svg') }}" alt="WebP 转 JPG">
+            <h2>WebP 转 JPG</h2>
+            <p>将 WebP 格式图像转换为标准 JPG</p>
+        </div>
+    </a>
+</div>
+
+<!-- ============================================================
+     FORMAT CONVERTERS
+     ============================================================ -->
+<span class="section-kicker">格式转换工具</span>
+<div class="section-heading">
+    <h2>图像格式相互转换</h2>
+    <div class="section-heading-line"></div>
+</div>
+
+<div class="grid-container">
+    <a href="/zh/convert/png-to-jpeg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_2.svg') }}" alt="PNG 转 JPEG"><h2>PNG 转 JPEG</h2><p>在线将 PNG 转换为 JPEG</p></div></a>
+    <a href="/zh/convert/png-to-bmp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="PNG 转 BMP"><h2>PNG 转 BMP</h2><p>在线将 PNG 转换为 BMP</p></div></a>
+    <a href="/zh/convert/png-to-tiff" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="PNG 转 TIFF"><h2>PNG 转 TIFF</h2><p>在线将 PNG 转换为 TIFF</p></div></a>
+    <a href="/zh/convert/png-to-webp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="PNG 转 WEBP"><h2>PNG 转 WEBP</h2><p>在线将 PNG 转换为 WEBP</p></div></a>
+    <a href="/zh/convert/png-to-ico" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="PNG 转 ICO"><h2>PNG 转 ICO</h2><p>在线将 PNG 转换为 ICO</p></div></a>
+    <a href="/zh/convert/jpg-to-jpeg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_2.svg') }}" alt="JPG 转 JPEG"><h2>JPG 转 JPEG</h2><p>在线将 JPG 转换为 JPEG</p></div></a>
+    <a href="/zh/convert/jpg-to-bmp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="JPG 转 BMP"><h2>JPG 转 BMP</h2><p>在线将 JPG 转换为 BMP</p></div></a>
+    <a href="/zh/convert/jpg-to-tiff" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="JPG 转 TIFF"><h2>JPG 转 TIFF</h2><p>在线将 JPG 转换为 TIFF</p></div></a>
+    <a href="/zh/convert/jpg-to-webp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="JPG 转 WEBP"><h2>JPG 转 WEBP</h2><p>在线将 JPG 转换为 WEBP</p></div></a>
+    <a href="/zh/convert/jpg-to-ico" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="JPG 转 ICO"><h2>JPG 转 ICO</h2><p>在线将 JPG 转换为 ICO</p></div></a>
+    <a href="/zh/convert/jpeg-to-png" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_1.svg') }}" alt="JPEG 转 PNG"><h2>JPEG 转 PNG</h2><p>在线将 JPEG 转换为 PNG</p></div></a>
+    <a href="/zh/convert/jpeg-to-jpg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_2.svg') }}" alt="JPEG 转 JPG"><h2>JPEG 转 JPG</h2><p>在线将 JPEG 转换为 JPG</p></div></a>
+    <a href="/zh/convert/jpeg-to-bmp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="JPEG 转 BMP"><h2>JPEG 转 BMP</h2><p>在线将 JPEG 转换为 BMP</p></div></a>
+    <a href="/zh/convert/jpeg-to-tiff" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="JPEG 转 TIFF"><h2>JPEG 转 TIFF</h2><p>在线将 JPEG 转换为 TIFF</p></div></a>
+    <a href="/zh/convert/jpeg-to-webp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="JPEG 转 WEBP"><h2>JPEG 转 WEBP</h2><p>在线将 JPEG 转换为 WEBP</p></div></a>
+    <a href="/zh/convert/jpeg-to-ico" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="JPEG 转 ICO"><h2>JPEG 转 ICO</h2><p>在线将 JPEG 转换为 ICO</p></div></a>
+    <a href="/zh/convert/bmp-to-png" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_1.svg') }}" alt="BMP 转 PNG"><h2>BMP 转 PNG</h2><p>在线将 BMP 转换为 PNG</p></div></a>
+    <a href="/zh/convert/bmp-to-jpg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_2.svg') }}" alt="BMP 转 JPG"><h2>BMP 转 JPG</h2><p>在线将 BMP 转换为 JPG</p></div></a>
+    <a href="/zh/convert/bmp-to-jpeg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="BMP 转 JPEG"><h2>BMP 转 JPEG</h2><p>在线将 BMP 转换为 JPEG</p></div></a>
+    <a href="/zh/convert/bmp-to-tiff" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="BMP 转 TIFF"><h2>BMP 转 TIFF</h2><p>在线将 BMP 转换为 TIFF</p></div></a>
+    <a href="/zh/convert/bmp-to-webp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="BMP 转 WEBP"><h2>BMP 转 WEBP</h2><p>在线将 BMP 转换为 WEBP</p></div></a>
+    <a href="/zh/convert/bmp-to-ico" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="BMP 转 ICO"><h2>BMP 转 ICO</h2><p>在线将 BMP 转换为 ICO</p></div></a>
+    <a href="/zh/convert/tiff-to-png" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_1.svg') }}" alt="TIFF 转 PNG"><h2>TIFF 转 PNG</h2><p>在线将 TIFF 转换为 PNG</p></div></a>
+    <a href="/zh/convert/tiff-to-jpg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_2.svg') }}" alt="TIFF 转 JPG"><h2>TIFF 转 JPG</h2><p>在线将 TIFF 转换为 JPG</p></div></a>
+    <a href="/zh/convert/tiff-to-jpeg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="TIFF 转 JPEG"><h2>TIFF 转 JPEG</h2><p>在线将 TIFF 转换为 JPEG</p></div></a>
+    <a href="/zh/convert/tiff-to-bmp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="TIFF 转 BMP"><h2>TIFF 转 BMP</h2><p>在线将 TIFF 转换为 BMP</p></div></a>
+    <a href="/zh/convert/tiff-to-webp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="TIFF 转 WEBP"><h2>TIFF 转 WEBP</h2><p>在线将 TIFF 转换为 WEBP</p></div></a>
+    <a href="/zh/convert/tiff-to-ico" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="TIFF 转 ICO"><h2>TIFF 转 ICO</h2><p>在线将 TIFF 转换为 ICO</p></div></a>
+    <a href="/zh/convert/webp-to-png" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_1.svg') }}" alt="WEBP 转 PNG"><h2>WEBP 转 PNG</h2><p>在线将 WEBP 转换为 PNG</p></div></a>
+    <a href="/zh/convert/webp-to-jpeg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="WEBP 转 JPEG"><h2>WEBP 转 JPEG</h2><p>在线将 WEBP 转换为 JPEG</p></div></a>
+    <a href="/zh/convert/webp-to-bmp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="WEBP 转 BMP"><h2>WEBP 转 BMP</h2><p>在线将 WEBP 转换为 BMP</p></div></a>
+    <a href="/zh/convert/webp-to-tiff" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="WEBP 转 TIFF"><h2>WEBP 转 TIFF</h2><p>在线将 WEBP 转换为 TIFF</p></div></a>
+    <a href="/zh/convert/webp-to-ico" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="WEBP 转 ICO"><h2>WEBP 转 ICO</h2><p>在线将 WEBP 转换为 ICO</p></div></a>
+    <a href="/zh/convert/ico-to-png" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_1.svg') }}" alt="ICO 转 PNG"><h2>ICO 转 PNG</h2><p>在线将 ICO 转换为 PNG</p></div></a>
+    <a href="/zh/convert/ico-to-jpg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_2.svg') }}" alt="ICO 转 JPG"><h2>ICO 转 JPG</h2><p>在线将 ICO 转换为 JPG</p></div></a>
+    <a href="/zh/convert/ico-to-jpeg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="ICO 转 JPEG"><h2>ICO 转 JPEG</h2><p>在线将 ICO 转换为 JPEG</p></div></a>
+    <a href="/zh/convert/ico-to-bmp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="ICO 转 BMP"><h2>ICO 转 BMP</h2><p>在线将 ICO 转换为 BMP</p></div></a>
+    <a href="/zh/convert/ico-to-tiff" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="ICO 转 TIFF"><h2>ICO 转 TIFF</h2><p>在线将 ICO 转换为 TIFF</p></div></a>
+    <a href="/zh/convert/ico-to-webp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="ICO 转 WEBP"><h2>ICO 转 WEBP</h2><p>在线将 ICO 转换为 WEBP</p></div></a>
+</div>
+
+<!-- ============================================================
+     BATCH PROCESSING TOOLS
+     ============================================================ -->
+<span class="section-kicker">批量处理</span>
+<div class="section-heading">
+    <h2>同时处理多张图片</h2>
+    <div class="section-heading-line"></div>
+</div>
+
+<div class="grid-container">
+    <a href="/zh/batch-image-compression" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='compress.svg') }}" alt="批量压缩"><h2>批量压缩</h2><p>一次性批量压缩多张图片</p></div>
+    </a>
+    <a href="/zh/batch-image-resize" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='resize1.svg') }}" alt="批量调整大小"><h2>批量调整大小</h2><p>同时批量调整多张图片的尺寸</p></div>
+    </a>
+    <a href="/zh/batch-image-crop" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='crop.svg') }}" alt="批量裁剪"><h2>批量裁剪</h2><p>一次性裁剪多张图片</p></div>
+    </a>
+    <a href="/zh/batch-convert-image-format" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='convert1.svg') }}" alt="批量转换"><h2>批量转换</h2><p>批量将多张图片转换为任意目标格式</p></div>
+    </a>
+    <a href="/zh/batch-image-rotate" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='rotate1.svg') }}" alt="批量旋转"><h2>批量旋转</h2><p>同时对多张图片进行方向旋转</p></div>
+    </a>
+    <a href="/zh/batch-image-effects" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='edit.svg') }}" alt="批量特效"><h2>批量特效</h2><p>批量对多张图片应用特效与滤镜</p></div>
+    </a>
+    <a href="/zh/batch-image-watermarking" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='stamp.svg') }}" alt="批量水印"><h2>批量水印</h2><p>批量添加文字或图像水印</p></div>
+    </a>
+    <a href="/zh/batch-blur-face" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='blur.svg') }}" alt="批量人脸模糊"><h2>批量人脸模糊</h2><p>批量自动检测并模糊图片中的人脸</p></div>
+    </a>
+</div>
+
+<!-- ============================================================
+     BATCH CONVERTERS
+     ============================================================ -->
+<span class="section-kicker">批量格式转换</span>
+<div class="section-heading">
+    <h2>批量多格式相互转换</h2>
+    <div class="section-heading-line"></div>
+</div>
+
+<div class="grid-container">
+    {% set batch_formats = [
+        ('png', 'jpg'), ('png', 'jpeg'), ('png', 'bmp'), ('png', 'tiff'), ('png', 'webp'), ('png', 'ico'),
+        ('jpg', 'png'), ('jpg', 'jpeg'), ('jpg', 'bmp'), ('jpg', 'tiff'), ('jpg', 'webp'), ('jpg', 'ico'),
+        ('jpeg', 'png'), ('jpeg', 'jpg'), ('jpeg', 'bmp'), ('jpeg', 'tiff'), ('jpeg', 'webp'), ('jpeg', 'ico'),
+        ('bmp', 'png'), ('bmp', 'jpg'), ('bmp', 'jpeg'), ('bmp', 'tiff'), ('bmp', 'webp'), ('bmp', 'ico'),
+        ('tiff', 'png'), ('tiff', 'jpg'), ('tiff', 'jpeg'), ('tiff', 'bmp'), ('tiff', 'webp'), ('tiff', 'ico'),
+        ('webp', 'png'), ('webp', 'jpg'), ('webp', 'jpeg'), ('webp', 'bmp'), ('webp', 'tiff'), ('webp', 'ico'),
+        ('ico', 'png'), ('ico', 'jpg'), ('ico', 'jpeg'), ('ico', 'bmp'), ('ico', 'tiff'), ('ico', 'webp')
+    ] %}
+    {% set icon_cycle = ['format_1.svg', 'format_2.svg', 'format_3.svg', 'format_4.svg', 'format_5.svg', 'format_6.svg'] %}
+    {% for from_fmt, to_fmt in batch_formats %}
+    <a href="/zh/batch/{{ from_fmt }}-to-{{ to_fmt }}" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename=icon_cycle[loop.index0 % 6]) }}" alt="批量 {{ from_fmt|upper }} 转 {{ to_fmt|upper }}">
+            <h2>批量 {{ from_fmt|upper }} 转 {{ to_fmt|upper }}</h2>
+            <p>批量将 {{ from_fmt|upper }} 图像转换为 {{ to_fmt|upper }}</p>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+
+<!-- ============================================================
+     HOW IT WORKS / PRIVACY
+     ============================================================ -->
+<div id="how-it-works">
+    <section class="privacy-section">
+        <div class="privacy-section-icon">🛡️</div>
+        <div>
+            <h2>您的图像始终完全私密</h2>
+            <p>Pixora Tools 完全使用客户端技术在您的浏览器本地处理图像。您的文件绝不会上传到任何服务器 — 整个处理过程中始终停留在您的设备上。无需账号，不收集数据，无任何行为追踪。快速、安全的现代化在线图像编辑体验。</p>
+        </div>
+    </section>
+</div>
+
+<!-- ============================================================
+     WHY PIXORA
+     ============================================================ -->
+<span class="section-kicker">为什么选择 Pixora</span>
+<div class="section-heading">
+    <h2>为极致速度与极简设计而生</h2>
+    <div class="section-heading-line"></div>
+</div>
+
+<div class="why-pixora">
+    <div class="why-pixora-card">
+        <div class="why-pixora-icon">⚡</div>
+        <h3>极速</h3>
+        <p>基于浏览器端的高性能技术，秒级出图。无需等待慢速的服务器上传与网络传输。</p>
+    </div>
+    <div class="why-pixora-card">
+        <div class="why-pixora-icon">🔒</div>
+        <h3>私密</h3>
+        <p>您的图片绝不离开您的设备。所有支持的处理均在本地浏览器中完成，绝不留存任何数据。</p>
+    </div>
+    <div class="why-pixora-card">
+        <div class="why-pixora-icon">✦</div>
+        <h3>免费</h3>
+        <p>Pixora 上的每款工具均完全免费。无需订阅，没有付费水印，没有任何隐藏套路。</p>
+    </div>
+    <div class="why-pixora-card">
+        <div class="why-pixora-icon">◎</div>
+        <h3>简单</h3>
+        <p>拖拽、调整、直接下载。专为所有人设计的直观界面，无需学习成本，即开即用。</p>
+    </div>
+</div>
+
+<!-- ============================================================
+     ABOUT PIXORA
+     ============================================================ -->
+<section class="about-pixora-section">
+    <h2>关于 Pixora Tools</h2>
+    <p>Pixora Tools 是一个专为经常需要处理图片的用户打造的独立在线图像实用工具平台。无论您是需要为网站压缩图片、转换格式以适应不同场景，还是为了隐私模糊敏感人脸，Pixora 都能为您提供直接在浏览器中运行的强大工具。</p>
+    <p>基于开源技术构建，Pixora 始终把速度、隐私与极简置于首位。无需下载软件，无需安装扩展，无需注册账号 — 强大图像处理随时可用。</p>
+    <p><a href="/zh/about">了解更多关于 Pixora →</a></p>
+</section>
+
+<!-- ============================================================
+     TRUST STRIP
+     ============================================================ -->
+<section class="trust-strip" aria-label="Pixora Tools 的优势">
+    <div class="trust-item"><span class="trust-icon">✓</span><span><strong>100% 隐私安全</strong><span>文件绝不离开您的设备</span></span></div>
+    <div class="trust-item"><span class="trust-icon">↯</span><span><strong>即时处理</strong><span>浏览器本地渲染极速响应</span></span></div>
+    <div class="trust-item"><span class="trust-icon">○</span><span><strong>无需注册</strong><span>立即开始编辑无门槛</span></span></div>
+    <div class="trust-item"><span class="trust-icon">☺</span><span><strong>简单易用</strong><span>清晰高效的处理流程</span></span></div>
+</section>
+
+{% endblock %}

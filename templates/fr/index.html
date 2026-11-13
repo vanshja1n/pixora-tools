@@ -1,0 +1,337 @@
+{% extends 'fr/base.html' %}
+
+{% block title %}Pixora Tools — Free Online Image Tools{% endblock %}
+
+{% block meta_description %}
+<meta name="description"
+    content="Pixora Tools — Outils d'image en ligne gratuits qui fonctionnent directement dans votre navigateur. Compressez, redimensionnez, convertissez, recadrez, filigranez et floutez les visages sans téléversement.">
+<meta name="keywords" content="compresseur d'image, redimensionner image, convertisseur d'image, recadrer image, filigrane image, flouter visage, PNG en JPG, JPG en PNG, outils image gratuits">
+<link rel="canonical" href="/fr/">
+{% endblock %}
+
+{% block content %}
+
+<!-- ============================================================
+     HERO SECTION
+     ============================================================ -->
+<section class="home-hero">
+    <div class="hero-copy">
+        <span class="hero-kicker">Outils d'Image Gratuits</span>
+        <h1>Pixora Tools</h1>
+        <h2>Pixora Tools — Free Online Image Tools. Des outils d'image rapides et gratuits qui fonctionnent dans votre navigateur. Compressez, redimensionnez, convertissez, recadrez et éditez — sans inscription ni envoi sur serveur.</h2>
+
+        <div class="hero-cta-row">
+            <a href="#featured-tools" class="cta-button" style="text-decoration:none;">Explorer les Outils</a>
+            <a href="#how-it-works" class="cta-button btn-secondary" style="text-decoration:none; border: 3px solid #111315;">Comment ça Marche</a>
+        </div>
+
+        <div class="hero-privacy">
+            <span class="hero-privacy-icon">🔒</span>
+            Traité dans votre navigateur — vos images ne quittent jamais votre appareil
+        </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+        <div class="pixora-graphic">
+            <div class="pixora-graphic-block pixora-graphic-block-1"></div>
+            <div class="pixora-graphic-block pixora-graphic-block-2"></div>
+            <div class="pixora-graphic-block pixora-graphic-block-3"></div>
+            <div class="pixora-graphic-circle"></div>
+            <div class="pixora-graphic-triangle"></div>
+            <div class="pixora-graphic-dots"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     FEATURED TOOLS
+     ============================================================ -->
+<div id="featured-tools">
+    <span class="section-kicker">Outils Populaires</span>
+    <div class="section-heading">
+        <h2>Outils d'Image</h2>
+        <div class="section-heading-line"></div>
+    </div>
+</div>
+
+<div class="grid-container">
+    <a href="/fr/image-compression" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='compress.svg') }}" alt="Compresser Image">
+            <h2>Compresser Image</h2>
+            <p>Réduisez la taille de vos fichiers sans perte de qualité</p>
+        </div>
+    </a>
+
+    <a href="/fr/image-resize" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='resize1.svg') }}" alt="Redimensionner Image">
+            <h2>Redimensionner Image</h2>
+            <p>Modifiez les dimensions de vos images selon vos besoins</p>
+        </div>
+    </a>
+
+    <a href="/fr/image-crop" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='crop.svg') }}" alt="Recadrer Image">
+            <h2>Recadrer Image</h2>
+            <p>Recadrez vos images à des dimensions précises</p>
+        </div>
+    </a>
+
+    <a href="/fr/convert-image-format" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='convert1.svg') }}" alt="Convertir Image">
+            <h2>Convertir Image</h2>
+            <p>Convertissez entre PNG, JPG, WebP, BMP, TIFF et ICO</p>
+        </div>
+    </a>
+
+    <a href="/fr/image-rotate" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='rotate1.svg') }}" alt="Faire Pivoter Image">
+            <h2>Faire Pivoter</h2>
+            <p>Faites pivoter et retournez vos images en toute liberté</p>
+        </div>
+    </a>
+
+    <a href="/fr/image-effects" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='edit.svg') }}" alt="Effets d'Image">
+            <h2>Effets d'Image</h2>
+            <p>Appliquez des filtres et des retouches à vos photos</p>
+        </div>
+    </a>
+
+    <a href="/fr/image-watermarking" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='stamp.svg') }}" alt="Filigrane Image">
+            <h2>Filigrane</h2>
+            <p>Ajoutez un filigrane textuel ou graphique pour protéger vos œuvres</p>
+        </div>
+    </a>
+
+    <a href="/fr/blur-face" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='blur.svg') }}" alt="Flouter le Visage">
+            <h2>Flouter le Visage</h2>
+            <p>Détectez et floutez automatiquement les visages pour la confidentialité</p>
+        </div>
+    </a>
+
+    <a href="/fr/remove-background" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='background-icon.svg') }}" alt="Supprimer l'Arrière-Plan">
+            <h2>Supprimer l'Arrière-Plan</h2>
+            <p>Supprimez les arrière-plans d'images en un instant</p>
+        </div>
+    </a>
+
+    <a href="/fr/convert/png-to-jpg" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='format_1.svg') }}" alt="PNG en JPG">
+            <h2>PNG en JPG</h2>
+            <p>Convertissez des images PNG au format JPG</p>
+        </div>
+    </a>
+
+    <a href="/fr/convert/jpg-to-png" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='format_2.svg') }}" alt="JPG en PNG">
+            <h2>JPG en PNG</h2>
+            <p>Convertissez des images JPG au format PNG</p>
+        </div>
+    </a>
+
+    <a href="/fr/convert/webp-to-jpg" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename='format_3.svg') }}" alt="WebP en JPG">
+            <h2>WebP en JPG</h2>
+            <p>Convertissez des images WebP au format JPG</p>
+        </div>
+    </a>
+</div>
+
+<!-- ============================================================
+     FORMAT CONVERTERS
+     ============================================================ -->
+<span class="section-kicker">Convertisseurs de Formats</span>
+<div class="section-heading">
+    <h2>Convertir Entre Formats</h2>
+    <div class="section-heading-line"></div>
+</div>
+
+<div class="grid-container">
+    <a href="/fr/convert/png-to-jpeg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_2.svg') }}" alt="PNG en JPEG"><h2>PNG en JPEG</h2><p>Convertissez des images PNG en JPEG en ligne</p></div></a>
+    <a href="/fr/convert/png-to-bmp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="PNG en BMP"><h2>PNG en BMP</h2><p>Convertissez des images PNG en BMP en ligne</p></div></a>
+    <a href="/fr/convert/png-to-tiff" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="PNG en TIFF"><h2>PNG en TIFF</h2><p>Convertissez des images PNG en TIFF en ligne</p></div></a>
+    <a href="/fr/convert/png-to-webp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="PNG en WEBP"><h2>PNG en WEBP</h2><p>Convertissez des images PNG en WEBP en ligne</p></div></a>
+    <a href="/fr/convert/png-to-ico" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="PNG en ICO"><h2>PNG en ICO</h2><p>Convertissez des images PNG en ICO en ligne</p></div></a>
+    <a href="/fr/convert/jpg-to-jpeg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_2.svg') }}" alt="JPG en JPEG"><h2>JPG en JPEG</h2><p>Convertissez des images JPG en JPEG en ligne</p></div></a>
+    <a href="/fr/convert/jpg-to-bmp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="JPG en BMP"><h2>JPG en BMP</h2><p>Convertissez des images JPG en BMP en ligne</p></div></a>
+    <a href="/fr/convert/jpg-to-tiff" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="JPG en TIFF"><h2>JPG en TIFF</h2><p>Convertissez des images JPG en TIFF en ligne</p></div></a>
+    <a href="/fr/convert/jpg-to-webp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="JPG en WEBP"><h2>JPG en WEBP</h2><p>Convertissez des images JPG en WEBP en ligne</p></div></a>
+    <a href="/fr/convert/jpg-to-ico" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="JPG en ICO"><h2>JPG en ICO</h2><p>Convertissez des images JPG en ICO en ligne</p></div></a>
+    <a href="/fr/convert/jpeg-to-png" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_1.svg') }}" alt="JPEG en PNG"><h2>JPEG en PNG</h2><p>Convertissez des images JPEG en PNG en ligne</p></div></a>
+    <a href="/fr/convert/jpeg-to-jpg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_2.svg') }}" alt="JPEG en JPG"><h2>JPEG en JPG</h2><p>Convertissez des images JPEG en JPG en ligne</p></div></a>
+    <a href="/fr/convert/jpeg-to-bmp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="JPEG en BMP"><h2>JPEG en BMP</h2><p>Convertissez des images JPEG en BMP en ligne</p></div></a>
+    <a href="/fr/convert/jpeg-to-tiff" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="JPEG en TIFF"><h2>JPEG en TIFF</h2><p>Convertissez des images JPEG en TIFF en ligne</p></div></a>
+    <a href="/fr/convert/jpeg-to-webp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="JPEG en WEBP"><h2>JPEG en WEBP</h2><p>Convertissez des images JPEG en WEBP en ligne</p></div></a>
+    <a href="/fr/convert/jpeg-to-ico" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="JPEG en ICO"><h2>JPEG en ICO</h2><p>Convertissez des images JPEG en ICO en ligne</p></div></a>
+    <a href="/fr/convert/bmp-to-png" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_1.svg') }}" alt="BMP en PNG"><h2>BMP en PNG</h2><p>Convertissez des images BMP en PNG en ligne</p></div></a>
+    <a href="/fr/convert/bmp-to-jpg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_2.svg') }}" alt="BMP en JPG"><h2>BMP en JPG</h2><p>Convertissez des images BMP en JPG en ligne</p></div></a>
+    <a href="/fr/convert/bmp-to-jpeg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="BMP en JPEG"><h2>BMP en JPEG</h2><p>Convertissez des images BMP en JPEG en ligne</p></div></a>
+    <a href="/fr/convert/bmp-to-tiff" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="BMP en TIFF"><h2>BMP en TIFF</h2><p>Convertissez des images BMP en TIFF en ligne</p></div></a>
+    <a href="/fr/convert/bmp-to-webp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="BMP en WEBP"><h2>BMP en WEBP</h2><p>Convertissez des images BMP en WEBP en ligne</p></div></a>
+    <a href="/fr/convert/bmp-to-ico" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="BMP en ICO"><h2>BMP en ICO</h2><p>Convertissez des images BMP en ICO en ligne</p></div></a>
+    <a href="/fr/convert/tiff-to-png" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_1.svg') }}" alt="TIFF en PNG"><h2>TIFF en PNG</h2><p>Convertissez des images TIFF en PNG en ligne</p></div></a>
+    <a href="/fr/convert/tiff-to-jpg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_2.svg') }}" alt="TIFF en JPG"><h2>TIFF en JPG</h2><p>Convertissez des images TIFF en JPG en ligne</p></div></a>
+    <a href="/fr/convert/tiff-to-jpeg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="TIFF en JPEG"><h2>TIFF en JPEG</h2><p>Convertissez des images TIFF en JPEG en ligne</p></div></a>
+    <a href="/fr/convert/tiff-to-bmp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="TIFF en BMP"><h2>TIFF en BMP</h2><p>Convertissez des images TIFF en BMP en ligne</p></div></a>
+    <a href="/fr/convert/tiff-to-webp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="TIFF en WEBP"><h2>TIFF en WEBP</h2><p>Convertissez des images TIFF en WEBP en ligne</p></div></a>
+    <a href="/fr/convert/tiff-to-ico" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="TIFF en ICO"><h2>TIFF en ICO</h2><p>Convertissez des images TIFF en ICO en ligne</p></div></a>
+    <a href="/fr/convert/webp-to-png" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_1.svg') }}" alt="WEBP en PNG"><h2>WEBP en PNG</h2><p>Convertissez des images WEBP en PNG en ligne</p></div></a>
+    <a href="/fr/convert/webp-to-jpeg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="WEBP en JPEG"><h2>WEBP en JPEG</h2><p>Convertissez des images WEBP en JPEG en ligne</p></div></a>
+    <a href="/fr/convert/webp-to-bmp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="WEBP en BMP"><h2>WEBP en BMP</h2><p>Convertissez des images WEBP en BMP en ligne</p></div></a>
+    <a href="/fr/convert/webp-to-tiff" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="WEBP en TIFF"><h2>WEBP en TIFF</h2><p>Convertissez des images WEBP en TIFF en ligne</p></div></a>
+    <a href="/fr/convert/webp-to-ico" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="WEBP en ICO"><h2>WEBP en ICO</h2><p>Convertissez des images WEBP en ICO en ligne</p></div></a>
+    <a href="/fr/convert/ico-to-png" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_1.svg') }}" alt="ICO en PNG"><h2>ICO en PNG</h2><p>Convertissez des images ICO en PNG en ligne</p></div></a>
+    <a href="/fr/convert/ico-to-jpg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_2.svg') }}" alt="ICO en JPG"><h2>ICO en JPG</h2><p>Convertissez des images ICO en JPG en ligne</p></div></a>
+    <a href="/fr/convert/ico-to-jpeg" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_3.svg') }}" alt="ICO en JPEG"><h2>ICO en JPEG</h2><p>Convertissez des images ICO en JPEG en ligne</p></div></a>
+    <a href="/fr/convert/ico-to-bmp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_4.svg') }}" alt="ICO en BMP"><h2>ICO en BMP</h2><p>Convertissez des images ICO en BMP en ligne</p></div></a>
+    <a href="/fr/convert/ico-to-tiff" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_5.svg') }}" alt="ICO en TIFF"><h2>ICO en TIFF</h2><p>Convertissez des images ICO en TIFF en ligne</p></div></a>
+    <a href="/fr/convert/ico-to-webp" style="text-decoration: none; color: inherit;"><div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="ICO en WEBP"><h2>ICO en WEBP</h2><p>Convertissez des images ICO en WEBP en ligne</p></div></a>
+</div>
+
+<!-- ============================================================
+     BATCH PROCESSING TOOLS
+     ============================================================ -->
+<span class="section-kicker">Traitement par Lot</span>
+<div class="section-heading">
+    <h2>Traiter Plusieurs Images Simultanément</h2>
+    <div class="section-heading-line"></div>
+</div>
+
+<div class="grid-container">
+    <a href="/fr/batch-image-compression" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='compress.svg') }}" alt="Compression par Lot"><h2>Compression par Lot</h2><p>Compressez plusieurs images en une seule fois</p></div>
+    </a>
+    <a href="/fr/batch-image-resize" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='resize1.svg') }}" alt="Redimensionnement par Lot"><h2>Redimensionnement par Lot</h2><p>Redimensionnez plusieurs images simultanément</p></div>
+    </a>
+    <a href="/fr/batch-image-crop" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='crop.svg') }}" alt="Recadrage par Lot"><h2>Recadrage par Lot</h2><p>Recadrez plusieurs images en même temps</p></div>
+    </a>
+    <a href="/fr/batch-convert-image-format" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='convert1.svg') }}" alt="Conversion par Lot"><h2>Conversion par Lot</h2><p>Convertissez plusieurs images vers n'importe quel format</p></div>
+    </a>
+    <a href="/fr/batch-image-rotate" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='rotate1.svg') }}" alt="Rotation par Lot"><h2>Rotation par Lot</h2><p>Faites pivoter plusieurs images simultanément</p></div>
+    </a>
+    <a href="/fr/batch-image-effects" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='edit.svg') }}" alt="Effets par Lot"><h2>Effets par Lot</h2><p>Appliquez des effets à plusieurs images</p></div>
+    </a>
+    <a href="/fr/batch-image-watermarking" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='stamp.svg') }}" alt="Filigrane par Lot"><h2>Filigrane par Lot</h2><p>Ajoutez un filigrane sur plusieurs images</p></div>
+    </a>
+    <a href="/fr/batch-blur-face" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool"><img src="{{ url_for('static', filename='blur.svg') }}" alt="Floutage Visage par Lot"><h2>Floutage Visage par Lot</h2><p>Floutez les visages sur plusieurs images</p></div>
+    </a>
+</div>
+
+<!-- ============================================================
+     BATCH CONVERTERS
+     ============================================================ -->
+<span class="section-kicker">Convertisseurs par Lot</span>
+<div class="section-heading">
+    <h2>Conversion de Formats par Lot</h2>
+    <div class="section-heading-line"></div>
+</div>
+
+<div class="grid-container">
+    {% set batch_formats = [
+        ('png', 'jpg'), ('png', 'jpeg'), ('png', 'bmp'), ('png', 'tiff'), ('png', 'webp'), ('png', 'ico'),
+        ('jpg', 'png'), ('jpg', 'jpeg'), ('jpg', 'bmp'), ('jpg', 'tiff'), ('jpg', 'webp'), ('jpg', 'ico'),
+        ('jpeg', 'png'), ('jpeg', 'jpg'), ('jpeg', 'bmp'), ('jpeg', 'tiff'), ('jpeg', 'webp'), ('jpeg', 'ico'),
+        ('bmp', 'png'), ('bmp', 'jpg'), ('bmp', 'jpeg'), ('bmp', 'tiff'), ('bmp', 'webp'), ('bmp', 'ico'),
+        ('tiff', 'png'), ('tiff', 'jpg'), ('tiff', 'jpeg'), ('tiff', 'bmp'), ('tiff', 'webp'), ('tiff', 'ico'),
+        ('webp', 'png'), ('webp', 'jpg'), ('webp', 'jpeg'), ('webp', 'bmp'), ('webp', 'tiff'), ('webp', 'ico'),
+        ('ico', 'png'), ('ico', 'jpg'), ('ico', 'jpeg'), ('ico', 'bmp'), ('ico', 'tiff'), ('ico', 'webp')
+    ] %}
+    {% set icon_cycle = ['format_1.svg', 'format_2.svg', 'format_3.svg', 'format_4.svg', 'format_5.svg', 'format_6.svg'] %}
+    {% for from_fmt, to_fmt in batch_formats %}
+    <a href="/fr/batch/{{ from_fmt }}-to-{{ to_fmt }}" style="text-decoration: none; color: inherit;">
+        <div class="grid-item tool">
+            <img src="{{ url_for('static', filename=icon_cycle[loop.index0 % 6]) }}" alt="Lot {{ from_fmt|upper }} vers {{ to_fmt|upper }}">
+            <h2>Lot {{ from_fmt|upper }} vers {{ to_fmt|upper }}</h2>
+            <p>Convertissez plusieurs images {{ from_fmt|upper }} vers {{ to_fmt|upper }}</p>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+
+<!-- ============================================================
+     HOW IT WORKS / PRIVACY
+     ============================================================ -->
+<div id="how-it-works">
+    <section class="privacy-section">
+        <div class="privacy-section-icon">🛡️</div>
+        <div>
+            <h2>Vos Images Restent Confidentielles</h2>
+            <p>Pixora Tools traite vos images directement dans votre navigateur grâce à des technologies côté client. Vos fichiers ne sont jamais téléchargés sur un serveur — ils restent sur votre appareil du début à la fin. Sans compte, sans collecte de données, sans traçage. Un traitement d'image rapide et 100% privé.</p>
+        </div>
+    </section>
+</div>
+
+<!-- ============================================================
+     WHY PIXORA
+     ============================================================ -->
+<span class="section-kicker">Pourquoi Pixora</span>
+<div class="section-heading">
+    <h2>Conçu pour la Rapidité et la Simplicité</h2>
+    <div class="section-heading-line"></div>
+</div>
+
+<div class="why-pixora">
+    <div class="why-pixora-card">
+        <div class="why-pixora-icon">⚡</div>
+        <h3>Rapide</h3>
+        <p>Le traitement direct dans le navigateur offre des résultats instantanés. Plus besoin d'attendre le téléchargement sur un serveur distant.</p>
+    </div>
+    <div class="why-pixora-card">
+        <div class="why-pixora-icon">🔒</div>
+        <h3>Privé</h3>
+        <p>Vos images ne quittent jamais votre machine. Tout le traitement compatible s'effectue localement sans aucun stockage de données.</p>
+    </div>
+    <div class="why-pixora-card">
+        <div class="why-pixora-icon">✦</div>
+        <h3>Gratuit</h3>
+        <p>Chaque outil sur Pixora est entièrement gratuit. Sans abonnement, sans filigrane forcé et sans frais cachés.</p>
+    </div>
+    <div class="why-pixora-card">
+        <div class="why-pixora-icon">◎</div>
+        <h3>Facile</h3>
+        <p>Glissez-déposez, ajustez et téléchargez. Une interface intuitive conçue pour tous — du graphiste au débutant.</p>
+    </div>
+</div>
+
+<!-- ============================================================
+     ABOUT PIXORA
+     ============================================================ -->
+<section class="about-pixora-section">
+    <h2>À Propos de Pixora Tools</h2>
+    <p>Pixora Tools est une plateforme indépendante d'outils d'image en ligne conçue pour tous ceux qui manipulent des visuels au quotidien. Que vous ayez besoin d'optimiser des photos pour un site web, de changer de format ou d'anonymiser des visages, Pixora vous apporte des outils fiables et instantanés directement dans votre navigateur.</p>
+    <p>Bâti sur des technologies open-source, Pixora met l'accent sur la rapidité, la confidentialité et l'ergonomie. Sans installation, sans inscription — simplement des outils performants au bout des doigts.</p>
+    <p><a href="/fr/about">En savoir plus sur Pixora →</a></p>
+</section>
+
+<!-- ============================================================
+     TRUST STRIP
+     ============================================================ -->
+<section class="trust-strip" aria-label="Avantages de Pixora Tools">
+    <div class="trust-item"><span class="trust-icon">✓</span><span><strong>100% Privé</strong><span>Vos images restent sur votre appareil</span></span></div>
+    <div class="trust-item"><span class="trust-icon">↯</span><span><strong>Traitement Instantané</strong><span>Exécution ultra-rapide en navigateur</span></span></div>
+    <div class="trust-item"><span class="trust-icon">○</span><span><strong>Sans Inscription</strong><span>Commencez à éditer immédiatement</span></span></div>
+    <div class="trust-item"><span class="trust-icon">☺</span><span><strong>Facile à Utiliser</strong><span>Interface fluide et intuitive</span></span></div>
+</section>
+
+{% endblock %}

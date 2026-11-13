@@ -1,0 +1,41 @@
+{% extends "fr/base.html" %}
+
+{% block title %}Contactez-nous | Pixora Tools — Free Online Image Tools{% endblock %}
+
+{% block meta_description %}
+<meta name="description" content="Contactez Pixora Tools - Contactez-nous pour toute question, commentaire ou support concernant nos outils de traitement d'image. Nous sommes là pour vous aider avec la compression, le redimensionnement, la conversion de format d'image, et plus encore.">
+{% endblock %}
+
+{% block content %}
+<h1>Contactez-nous - Pixora Tools</h1>
+
+<div class="contact-section">
+    <h2>Entrer en Contact</h2>
+    <p>Nous serions ravis d'avoir de vos nouvelles ! Que vous ayez une question sur nos outils, besoin d'une assistance technique ou souhaitiez nous faire part de vos commentaires, n'hésitez pas à nous contacter.</p>
+    
+    <p>Envoyez-nous un e-mail à : <a href="mailto:vj8067202@gmail.com">vj8067202@gmail.com</a></p>
+</div>
+
+<div class="contact-section">
+    <h2>Autres Moyens de Nous Joindre</h2>
+    <p>Pour des réponses plus rapides, veuillez d'abord consulter notre <a href="/fr/faq">page FAQ</a>. De nombreuses questions courantes y trouvent réponse.</p>
+</div>
+
+<style>
+    .contact-section {
+        margin-bottom: 24px;
+        padding: clamp(20px, 3vw, 32px);
+        background-color: var(--color-white);
+        border: var(--border);
+        box-shadow: var(--shadow-hard-sm);
+        border-radius: 0;
+    }
+    .contact-section a {
+        color: var(--color-orange);
+        font-weight: 700;
+    }
+    .contact-section a:hover {
+        color: var(--color-orange-dark);
+    }
+</style>
+{% endblock %}

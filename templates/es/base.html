@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block meta_description %}
+    <meta name="description" content="Pixora Tools — Herramientas de imagen gratuitas en línea. Comprime, redimensiona, convierte, recorta, añade marcas de agua y edita imágenes directamente en tu navegador.">
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='pixora_tools.ico') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='pixora_tools.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/image-conversion@2.1.1/build/conversion.js"></script>
+    <title>{% block title %}Pixora Tools — Free Online Image Tools{% endblock %}</title>
+</head>
+<body>
+    {% include 'es/navbar.html' %}
+    <main>
+        {% block content %}{% endblock %}
+        {% set excluded_endpoints = ['index', 'tools'] %}
+        {% if request.endpoint not in excluded_endpoints %}
+            {% include 'es/our_all_tools.html' %}
+        {% endif %}
+    </main>
+    {% include 'es/navigation_tools.html' %}
+    {% include 'es/footer.html' %}
+</body>
+</html>

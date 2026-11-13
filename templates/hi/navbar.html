@@ -1,0 +1,100 @@
+<nav>
+    <div class="nav-logo">
+        <a href="/hi/" style="text-decoration: none; color: inherit;">Pixora Tools</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="मेनू खोलें" aria-expanded="false" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="/hi/image-compression">संकुचित करें</a></li>
+        <li><a href="/hi/image-resize">आकार बदलें</a></li>
+        <li><a href="/hi/convert-image-format">परिवर्तित करें</a></li>
+        <li class="more-menu">
+            <a href="javascript:void(0)" class="more-menu-button">
+                <span>अधिक उपकरण</span>
+                <span class="more-indicator">+</span>
+            </a>
+            <div class="more-menu-content">
+                <a href="/hi/image-rotate">इमेज घुमाएँ</a>
+                <a href="/hi/image-watermarking">वॉटरमार्क</a>
+                <a href="/hi/image-effects">इमेज प्रभाव</a>
+                <a href="/hi/image-crop">इमेज क्रॉप करें</a>
+                <a href="/hi/blur-face">चेहरा धुंधला करें</a>
+                <a href="/hi/remove-background">बैकग्राउंड हटाएं</a>
+                <a href="/hi/tools">सभी उपकरण</a>
+            </div>
+        </li>
+        <li><a href="/hi/about">हमारे बारे में</a></li>
+    </ul>
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        const moreMenuButton = document.querySelector('.more-menu-button');
+        const moreMenuContent = document.querySelector('.more-menu-content');
+
+        function closeNav() {
+            if (hamburger && navLinks) {
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = hamburger.classList.toggle('active');
+                hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                navLinks.classList.toggle('active');
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            });
+        }
+
+        if (moreMenuButton && moreMenuContent) {
+            moreMenuButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isShown = moreMenuContent.classList.toggle('show');
+                const indicator = moreMenuButton.querySelector('.more-indicator');
+                if (indicator) {
+                    indicator.textContent = isShown ? '−' : '+';
+                }
+            });
+        }
+
+        if (navLinks) {
+            navLinks.querySelectorAll('a:not(.more-menu-button)').forEach(link => {
+                link.addEventListener('click', () => {
+                    closeNav();
+                });
+            });
+        }
+
+        document.addEventListener('click', (e) => {
+            if (navLinks && navLinks.classList.contains('active')) {
+                if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                    closeNav();
+                }
+            }
+            if (moreMenuContent && moreMenuContent.classList.contains('show')) {
+                if (!moreMenuContent.contains(e.target) && !moreMenuButton.contains(e.target)) {
+                    moreMenuContent.classList.remove('show');
+                    const indicator = moreMenuButton ? moreMenuButton.querySelector('.more-indicator') : null;
+                    if (indicator) indicator.textContent = '+';
+                }
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) {
+                closeNav();
+            }
+        });
+    });
+</script>
