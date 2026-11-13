@@ -12,7 +12,7 @@ app = Flask(__name__)
 supported_languages = ['en', 'hi', 'fr', 'zh', 'es']
 
 # Canonical site configurations for SEO & Sitemap
-SITE_DOMAIN = 'https://pixoratools.com'
+SITE_DOMAIN = os.environ.get('SITE_DOMAIN', 'https://pixoratools.vercel.app').rstrip('/')
 
 TOOL_ROUTES = [
     'image-compression',
