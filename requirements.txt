@@ -1,6 +1,5 @@
 Flask
 Pillow
-uuid
 onnxruntime
 gunicorn
 requests
