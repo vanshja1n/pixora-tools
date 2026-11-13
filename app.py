@@ -34,7 +34,6 @@ INFO_ROUTES = [
     'media',
     'legal',
     'our-story',
-    'team',
     'features',
     'pricing',
     'languages',
@@ -273,13 +272,6 @@ def our_story(lang='en'):
     if lang not in supported_languages:
         return redirect('/en/our-story')
     return render_template(f'{lang}/our_story.html')
-
-@app.route('/team')
-@app.route('/<lang>/team')
-def team(lang='en'):
-    if lang not in supported_languages:
-        return redirect('/en/team')
-    return render_template(f'{lang}/team.html')
 
 @app.route('/features')
 @app.route('/<lang>/features')

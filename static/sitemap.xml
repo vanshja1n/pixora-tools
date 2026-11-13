@@ -532,15 +532,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pixoratools.com/our-story"/>
   </url>
   <url>
-    <loc>https://pixoratools.com/team</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pixoratools.com/team"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://pixoratools.com/hi/team"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pixoratools.com/fr/team"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://pixoratools.com/zh/team"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://pixoratools.com/es/team"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pixoratools.com/team"/>
-  </url>
-  <url>
     <loc>https://pixoratools.com/features</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pixoratools.com/features"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://pixoratools.com/hi/features"/>
@@ -1115,15 +1106,6 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://pixoratools.com/zh/our-story"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://pixoratools.com/es/our-story"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pixoratools.com/our-story"/>
-  </url>
-  <url>
-    <loc>https://pixoratools.com/hi/team</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pixoratools.com/team"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://pixoratools.com/hi/team"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pixoratools.com/fr/team"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://pixoratools.com/zh/team"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://pixoratools.com/es/team"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pixoratools.com/team"/>
   </url>
   <url>
     <loc>https://pixoratools.com/hi/features</loc>
@@ -1702,15 +1684,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pixoratools.com/our-story"/>
   </url>
   <url>
-    <loc>https://pixoratools.com/fr/team</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pixoratools.com/team"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://pixoratools.com/hi/team"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pixoratools.com/fr/team"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://pixoratools.com/zh/team"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://pixoratools.com/es/team"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pixoratools.com/team"/>
-  </url>
-  <url>
     <loc>https://pixoratools.com/fr/features</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pixoratools.com/features"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://pixoratools.com/hi/features"/>
@@ -2287,15 +2260,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pixoratools.com/our-story"/>
   </url>
   <url>
-    <loc>https://pixoratools.com/zh/team</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pixoratools.com/team"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://pixoratools.com/hi/team"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pixoratools.com/fr/team"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://pixoratools.com/zh/team"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://pixoratools.com/es/team"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pixoratools.com/team"/>
-  </url>
-  <url>
     <loc>https://pixoratools.com/zh/features</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://pixoratools.com/features"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://pixoratools.com/hi/features"/>
@@ -2870,15 +2834,6 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://pixoratools.com/zh/our-story"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://pixoratools.com/es/our-story"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pixoratools.com/our-story"/>
-  </url>
-  <url>
-    <loc>https://pixoratools.com/es/team</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pixoratools.com/team"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://pixoratools.com/hi/team"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pixoratools.com/fr/team"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://pixoratools.com/zh/team"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://pixoratools.com/es/team"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pixoratools.com/team"/>
   </url>
   <url>
     <loc>https://pixoratools.com/es/features</loc>
