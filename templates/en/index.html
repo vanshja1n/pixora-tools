@@ -5,7 +5,7 @@
 {% block meta_description %}
 <meta name="google-site-verification" content="Y96-jGrVkDpRSeqjvPpMkkXMQucFLWn4hIB9D7MxWw4" />
 <meta name="description"
-    content="Pixora Tools — Free online image tools that work in your browser. Compress, resize, convert, crop, watermark, rotate, blur faces, and batch-process images. Fast, private, no uploads required.">
+    content="Pixora Tools — Free online image tools that work in your browser. Compress, resize, convert, crop, watermark, rotate, blur faces, and edit images. Fast, private, no uploads required.">
 <meta name="keywords" content="image compressor, image resizer, image converter, crop image, watermark image, blur face, PNG to JPG, JPG to PNG, free image tools, online image editor, browser image tools">
 <link rel="canonical" href="/">
 {% endblock %}
@@ -279,73 +279,6 @@
     <a href="/convert/ico-to-webp" style="text-decoration: none; color: inherit;">
         <div class="grid-item tool"><img src="{{ url_for('static', filename='format_6.svg') }}" alt="ICO to WEBP"><h2>ICO to WEBP</h2><p>Convert ICO images to WEBP online</p></div>
     </a>
-</div>
-
-<!-- ============================================================
-     BATCH PROCESSING TOOLS
-     ============================================================ -->
-<span class="section-kicker">Batch Processing</span>
-<div class="section-heading">
-    <h2>Process Multiple Images</h2>
-    <div class="section-heading-line"></div>
-</div>
-
-<div class="grid-container">
-    <a href="/batch-image-compression" style="text-decoration: none; color: inherit;">
-        <div class="grid-item tool"><img src="{{ url_for('static', filename='compress.svg') }}" alt="Batch Compress"><h2>Batch Compress</h2><p>Compress multiple images at once</p></div>
-    </a>
-    <a href="/batch-image-resize" style="text-decoration: none; color: inherit;">
-        <div class="grid-item tool"><img src="{{ url_for('static', filename='resize1.svg') }}" alt="Batch Resize"><h2>Batch Resize</h2><p>Resize multiple images simultaneously</p></div>
-    </a>
-    <a href="/batch-image-crop" style="text-decoration: none; color: inherit;">
-        <div class="grid-item tool"><img src="{{ url_for('static', filename='crop.svg') }}" alt="Batch Crop"><h2>Batch Crop</h2><p>Crop multiple images at once</p></div>
-    </a>
-    <a href="/batch-convert-image-format" style="text-decoration: none; color: inherit;">
-        <div class="grid-item tool"><img src="{{ url_for('static', filename='convert1.svg') }}" alt="Batch Convert"><h2>Batch Convert</h2><p>Convert multiple images to any format</p></div>
-    </a>
-    <a href="/batch-image-rotate" style="text-decoration: none; color: inherit;">
-        <div class="grid-item tool"><img src="{{ url_for('static', filename='rotate1.svg') }}" alt="Batch Rotate"><h2>Batch Rotate</h2><p>Rotate multiple images simultaneously</p></div>
-    </a>
-    <a href="/batch-image-effects" style="text-decoration: none; color: inherit;">
-        <div class="grid-item tool"><img src="{{ url_for('static', filename='edit.svg') }}" alt="Batch Effects"><h2>Batch Effects</h2><p>Apply effects to multiple images</p></div>
-    </a>
-    <a href="/batch-image-watermarking" style="text-decoration: none; color: inherit;">
-        <div class="grid-item tool"><img src="{{ url_for('static', filename='stamp.svg') }}" alt="Batch Watermark"><h2>Batch Watermark</h2><p>Add watermark to multiple images</p></div>
-    </a>
-    <a href="/batch-blur-face" style="text-decoration: none; color: inherit;">
-        <div class="grid-item tool"><img src="{{ url_for('static', filename='blur.svg') }}" alt="Batch Blur Face"><h2>Batch Blur Face</h2><p>Blur faces in multiple images</p></div>
-    </a>
-</div>
-
-<!-- ============================================================
-     BATCH CONVERTERS
-     ============================================================ -->
-<span class="section-kicker">Batch Converters</span>
-<div class="section-heading">
-    <h2>Batch Image Format Conversion</h2>
-    <div class="section-heading-line"></div>
-</div>
-
-<div class="grid-container">
-    {% set batch_formats = [
-        ('png', 'jpg'), ('png', 'jpeg'), ('png', 'bmp'), ('png', 'tiff'), ('png', 'webp'), ('png', 'ico'),
-        ('jpg', 'png'), ('jpg', 'jpeg'), ('jpg', 'bmp'), ('jpg', 'tiff'), ('jpg', 'webp'), ('jpg', 'ico'),
-        ('jpeg', 'png'), ('jpeg', 'jpg'), ('jpeg', 'bmp'), ('jpeg', 'tiff'), ('jpeg', 'webp'), ('jpeg', 'ico'),
-        ('bmp', 'png'), ('bmp', 'jpg'), ('bmp', 'jpeg'), ('bmp', 'tiff'), ('bmp', 'webp'), ('bmp', 'ico'),
-        ('tiff', 'png'), ('tiff', 'jpg'), ('tiff', 'jpeg'), ('tiff', 'bmp'), ('tiff', 'webp'), ('tiff', 'ico'),
-        ('webp', 'png'), ('webp', 'jpg'), ('webp', 'jpeg'), ('webp', 'bmp'), ('webp', 'tiff'), ('webp', 'ico'),
-        ('ico', 'png'), ('ico', 'jpg'), ('ico', 'jpeg'), ('ico', 'bmp'), ('ico', 'tiff'), ('ico', 'webp')
-    ] %}
-    {% set icon_cycle = ['format_1.svg', 'format_2.svg', 'format_3.svg', 'format_4.svg', 'format_5.svg', 'format_6.svg'] %}
-    {% for from_fmt, to_fmt in batch_formats %}
-    <a href="/batch/{{ from_fmt }}-to-{{ to_fmt }}" style="text-decoration: none; color: inherit;">
-        <div class="grid-item tool">
-            <img src="{{ url_for('static', filename=icon_cycle[loop.index0 % 6]) }}" alt="Batch {{ from_fmt|upper }} to {{ to_fmt|upper }}">
-            <h2>Batch {{ from_fmt|upper }} to {{ to_fmt|upper }}</h2>
-            <p>Convert multiple {{ from_fmt|upper }} images to {{ to_fmt|upper }}</p>
-        </div>
-    </a>
-    {% endfor %}
 </div>
 
 <!-- ============================================================
